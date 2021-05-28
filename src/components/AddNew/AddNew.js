@@ -1,11 +1,11 @@
 import React from 'react';
-import "./Modal.css"
+import "./AddNew.css"
 import {setProduct} from "../../redux/action-creators";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {useState} from "react";
 import {v4 as uuidv4} from "uuid"
 
-const Modal = ({active, setActive}) => {
+const AddNew = ({active, setActive}) => {
     const dispatch = useDispatch()
     const [image, setImage] = useState("")
     const [title, setTitle] = useState("")
@@ -50,4 +50,4 @@ const Modal = ({active, setActive}) => {
     );
 };
 
-export default Modal;
+export default AddNew;

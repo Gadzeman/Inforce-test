@@ -17,7 +17,6 @@ const Comments = ({productId}) => {
     const onComment = () => {
         dispatch(setComment(obj))
         setDescription("")
-        console.log(comments)
     }
     return (
         <div className={"comments"}>
