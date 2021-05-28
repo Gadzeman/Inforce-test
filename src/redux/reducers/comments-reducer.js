@@ -1,4 +1,5 @@
 import {
+    DELETE_COMMENT,
     SET_COMMENT
 } from "../action-types";
 
@@ -11,6 +12,12 @@ const reducer = (state = initialState, action) => {
         case SET_COMMENT: {
             return {
                 comments: [...state.comments, action.payload]
+            }
+        }
+        case DELETE_COMMENT: {
+            return {
+                ...state,
+                comments: state.comments.filter(el => action.payload !== el.id)
             }
         }
         default: {

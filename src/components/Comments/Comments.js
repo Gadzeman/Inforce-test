@@ -3,7 +3,7 @@ import "./Comments.css"
 import {useState} from "react";
 import {v4 as uuidv4} from "uuid"
 import {useDispatch, useSelector} from "react-redux";
-import {setComment} from "../../redux/action-creators";
+import {deleteComment, setComment} from "../../redux/action-creators";
 
 const Comments = ({productId}) => {
     const dispatch = useDispatch()
@@ -27,6 +27,7 @@ const Comments = ({productId}) => {
                 {el.product_id === productId &&
                 <div>
                     <h3>{el.description}</h3>
+                    <button onClick={() => dispatch(deleteComment(el.id))}>remove</button>
                     <hr/>
                 </div>
                 }
