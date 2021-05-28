@@ -1,0 +1,33 @@
+.details {
+    text-align: center;
+}
+.product-details {
+    background: black;
+    color: white;
+    width: 600px;
+    margin: auto;
+    border-radius: 15px;
+}
+.product-details-top {
+    display: flex;
+}
+.product-details-top p {
+    width: 250px;
+    height: 150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-left: 25px;
+}
+.product-details-buttom {
+    display: flex;
+    justify-content: space-between;
+}
+.product-details-buttom button {
+    height: 40px;
+    width: 100px;
+    margin-top: 15px;
+    margin-right: 100px;
+}
+.product-details-buttom h2 {
+    margin-left: 50px;
+}

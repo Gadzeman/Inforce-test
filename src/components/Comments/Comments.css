@@ -1,0 +1,10 @@
+.comments h1 {
+    text-align: center;
+}
+.comments input {
+    margin-left: 500px;
+}
+.comments-item {
+    margin-left: 500px;
+    width: 600px;
+}

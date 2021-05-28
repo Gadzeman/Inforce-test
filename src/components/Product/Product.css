@@ -1,0 +1,39 @@
+.product {
+    background: black;
+    color: white;
+    width: 30%;
+    height: 750px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+.product img {
+    width: 100%;
+    height: 300px;
+}
+.product h1 {
+    text-align: center;
+}
+.product p {
+    text-align: justify;
+    height: 200px;
+    width: 330px;
+    overflow: scroll;
+    margin: auto;
+    overflow-x: hidden;
+}
+.product h2 {
+    padding-left: 30px;
+}
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.product-buttons button {
+    background: white;
+    border: solid white 1px;
+    border-radius: 6px;
+    width: 120px;
+    height: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+}

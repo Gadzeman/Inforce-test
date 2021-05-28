@@ -1,0 +1,10 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1350px;
+    margin: auto;
+}
+.products-title {
+    text-align: center;
+}
