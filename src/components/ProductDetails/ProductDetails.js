@@ -9,8 +9,7 @@ const ProductDetails = () => {
     const [editActive, setEditActive] = useState(false)
     const {products} = useSelector(store => store.products)
     const params = useParams()
-    const productDetails = products.filter(el => el.id == params.id)
-    console.log(productDetails)
+    const productDetails = products.filter(el => el.id === params.id)
     return (
         <div>
             {productDetails.map(productDetails => <div key={productDetails.id}>
