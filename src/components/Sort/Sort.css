@@ -1,0 +1,10 @@
+.sort {
+    margin-left: 160px;
+}
+.sort button {
+    margin-right: 50px;
+    background: #0f1526;
+    color: white;
+    height: 30px;
+    width: 250px;
+}
