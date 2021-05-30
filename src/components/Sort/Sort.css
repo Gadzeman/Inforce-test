@@ -7,4 +7,7 @@
     color: white;
     height: 30px;
     width: 250px;
+    border: #0f1526 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
 }
