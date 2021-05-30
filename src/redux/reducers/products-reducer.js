@@ -1,7 +1,8 @@
 import {
     SET_PRODUCT,
     DELETE_PRODUCT,
-    SORT_PRODUCTS
+    SORT_PRODUCTS,
+    RESET_PRODUCTS
 } from "../action-types";
 
 const localStorageState = localStorage.getItem("products")
@@ -13,6 +14,12 @@ const reducer = (state = initialState, action) => {
         case SET_PRODUCT: {
             return {
                 products: [...state.products, action.payload]
+            }
+        }
+        case RESET_PRODUCTS: {
+            return {
+                ...state,
+                products: action.payload
             }
         }
         case SORT_PRODUCTS: {

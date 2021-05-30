@@ -1,8 +1,12 @@
 import React from 'react';
 import "./Edit.css"
 import {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {resetProducts} from "../../../../../redux/action-creators";
 
 const Edit = ({product, active, setActive}) => {
+    const dispatch = useDispatch()
+    const {products} = useSelector(store => store.products)
     const [image, setImage] = useState(product.image)
     const [title, setTitle] = useState(product.title)
     const [description, setDescription] = useState(product.description)
@@ -12,6 +16,7 @@ const Edit = ({product, active, setActive}) => {
         product.title = title
         product.description = description
         product.count = count
+        dispatch(resetProducts(products))
         setActive(false)
     }
     return (
