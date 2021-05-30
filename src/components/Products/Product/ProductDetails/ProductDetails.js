@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import "./ProductDetails.css"
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import Comments from "../Comments/Comments";
-import Edit from "../Edit/Edit";
+import Comments from "./Comments/Comments";
+import Edit from "./Edit/Edit";
 
 const ProductDetails = () => {
     const [editActive, setEditActive] = useState(false)

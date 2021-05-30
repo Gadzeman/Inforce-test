@@ -2,7 +2,7 @@ import React from 'react';
 import "./Product.css"
 import {useHistory} from "react-router";
 import {useDispatch} from "react-redux";
-import {deleteProduct} from "../../redux/action-creators";
+import {deleteProduct} from "../../../redux/action-creators";
 
 const Product = ({product}) => {
     const history = useHistory()

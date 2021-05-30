@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Sort.css"
 import {useSelector, useDispatch} from "react-redux";
-import {sortProducts} from "../../redux/action-creators";
+import {sortProducts} from "../../../redux/action-creators";
 
 const Sort = () => {
     const {products} = useSelector(store => store.products)

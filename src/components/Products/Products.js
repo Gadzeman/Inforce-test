@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Products.css"
 import {useSelector} from "react-redux";
-import Product from "../Product/Product";
-import Sort from "../Sort/Sort";
+import Product from "./Product/Product";
+import Sort from "./Sort/Sort";
 
 const Products = () => {
     const {products} = useSelector(store => store.products)
