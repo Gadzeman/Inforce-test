@@ -7,6 +7,7 @@ import {v4 as uuidv4} from "uuid"
 
 const AddNew = ({active, setActive}) => {
     const dispatch = useDispatch()
+    const [valid, setValid] = useState(false)
     const [image, setImage] = useState("")
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -19,12 +20,22 @@ const AddNew = ({active, setActive}) => {
         count: count
     }
     const onCreate = () => {
-        dispatch(setProduct(obj))
+        if (image === "" || title === "" || description === "" || count === 0) {
+            setValid(true)
+            return
+        }else{
+            dispatch(setProduct(obj))
+            setValid(false)
+            setActive(false)
+            setImage("")
+            setTitle("")
+            setDescription("")
+            setCount(0)
+        }
+    }
+    const onCancel = () => {
         setActive(false)
-        setImage("")
-        setTitle("")
-        setDescription("")
-        setCount(0)
+        setValid(false)
     }
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
@@ -41,9 +52,10 @@ const AddNew = ({active, setActive}) => {
                 <input value={count} onChange={({target: {value}}) => setCount(value)} type="number" placeholder="Enter product count"/>
                 <br/>
                 <br/>
+                {valid && <div className={"modal-valid"}>Fill in each input</div>}
                 <div className={"modal-buttons"}>
                     <button onClick={onCreate}>Add</button>
-                    <button onClick={() => setActive(false)}>Cancel</button>
+                    <button onClick={onCancel}>Cancel</button>
                 </div>
             </div>
         </div>
