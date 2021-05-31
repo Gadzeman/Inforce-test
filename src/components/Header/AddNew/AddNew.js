@@ -33,13 +33,20 @@ const AddNew = ({active, setActive}) => {
             setCount(0)
         }
     }
+    const onActive = () => {
+        setActive(false)
+        setValid(false)
+    }
+    const onExit = (e) => {
+        e.stopPropagation()
+    }
     const onCancel = () => {
         setActive(false)
         setValid(false)
     }
     return (
-        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-            <div className="modal__content" onClick={e => e.stopPropagation()}>
+        <div className={active ? "modal active" : "modal"} onClick={onActive}>
+            <div className="modal__content" onClick={onExit}>
                 <input value={image} onChange={({target: {value}}) => setImage(value)} type="text" placeholder="Enter image (url)"/>
                 <br/>
                 <br/>
