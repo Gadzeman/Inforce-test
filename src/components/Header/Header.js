@@ -6,7 +6,7 @@ const Header = ({setActive}) => {
     const history = useHistory()
     return (
         <div className={"header"}>
-            <h1 onClick={() => history.push("/")}>Inforce Test</h1>
+            <h1 onClick={() => history.push("/")}>Home</h1>
             <h3 onClick={() => setActive(true)}>Add new product</h3>
         </div>
     );

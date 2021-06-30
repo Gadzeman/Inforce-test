@@ -1,7 +1,6 @@
 import {createStore} from "redux";
 import {reducers} from "./reducers/combined-reducers";
 import {applyMiddleware} from "redux";
-import thunk from "redux-thunk";
 
 const persister = (store) => (next) => (action) => {
     next(action)
@@ -11,6 +10,6 @@ const persister = (store) => (next) => (action) => {
 }
 export const store = createStore(
     reducers,
-    applyMiddleware(thunk, persister)
+    applyMiddleware(persister)
 )
 

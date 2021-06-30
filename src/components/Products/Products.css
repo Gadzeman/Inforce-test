@@ -1,8 +1,7 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 1350px;
+    width: 1500px;
     margin: auto;
 }
 .products-title {

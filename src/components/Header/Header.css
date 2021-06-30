@@ -1,5 +1,6 @@
 .header {
-    background: black;
+    /*background: #242761;*/
+    background: linear-gradient(#0f1526, white);
     color: white;
     display: flex;
     height: 150px;
@@ -9,8 +10,18 @@
 .header h1 {
     margin-left: 150px;
     cursor: pointer;
+    transition: 500ms;
+}
+.header h1:hover {
+    color: cadetblue;
+    transition: 500ms;
 }
 .header h3 {
     margin-right: 150px;
     cursor: pointer;
+    transition: 500ms;
+}
+.header h3:hover {
+    transform: scale(1.1);
+    transition: 500ms;
 }

@@ -27,6 +27,7 @@
     width: 100px;
     margin-top: 15px;
     margin-right: 100px;
+    cursor: pointer;
 }
 .product-details-buttom h2 {
     margin-left: 50px;

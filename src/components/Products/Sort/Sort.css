@@ -10,4 +10,11 @@
     border: #0f1526 solid 1px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 500ms;
+}
+.sort button:hover {
+    background: white;
+    color: black;
+    transition: 500ms;
+    transform: scale(1.1);
 }
